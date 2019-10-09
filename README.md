@@ -38,6 +38,9 @@ sample params have to pass as below
 
 {"mvp": {"threshold": 3, "measure_data": [1,2,3,5,6,6,0.1,2.2]}}
 
+Logic used: comparing the threshold value with measure data
+if ceil of measure data is equal or greater than threshold value signal is 1 otherwise 0
+
 Output
 
 {
