@@ -5,22 +5,38 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Explanation of Task
 
-* System dependencies
+Assuming application will use multiple users
 
-* Configuration
+Created End point for users sign in
 
-* Database creation
+/api/v1/users/sign_in 
 
-* Database initialization
+When user signin system will generate authentication token
+and success message.
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+On every endpoint in headers need to pass the generated authentication token otherwise endpoints will not be able to access it will throw unauthorised error
 
-* Deployment instructions
+/api/v1/users/sign_out
 
-* ...
+Using this api user can logout from the application
+
+/api/v1/mvp/signal
+
+Using this api user have to pass measure data and threshold so that system will calculate the signal data based on the threshold
+
+Example
+
+sample params have to pass as below
+
+{"mvp": {"threshold": 3, "measure_data": [1,2,3,5,6,6,0.1,2.2]}}
+
+
+
+
+
+
 
 
